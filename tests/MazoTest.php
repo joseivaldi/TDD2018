@@ -38,4 +38,9 @@ class MazoTest extends TestCase {
         $mazo = new Mazo;
         $this->assertTrue($mazo->nuevacarta());
     }  
+    
+    public function testEsVacio() {
+        $mazo = new Mazo;
+        $this->assertTrue($mazo->esvacio());
+    }  
 }
