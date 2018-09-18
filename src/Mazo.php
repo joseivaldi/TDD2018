@@ -25,4 +25,13 @@ class Mazo {
   public function nuevacarta() {
     return TRUE;
   }
+  
+  public function esvacio() {
+    if($this->cantidad==0){
+      return TRUE;
+    }
+    else{
+      return FALSE;
+    }
+  }
 }
