@@ -3,6 +3,8 @@
 namespace TDD;
 
 class Mazo {
+  
+  protected $cantidad;
 
   public function mezclar() {
     return TRUE;
@@ -17,7 +19,7 @@ class Mazo {
   }
   
   public function cantidad() {
-    return TRUE;
+    return $this->cantidad;
   }
   
   public function nuevacarta() {
