@@ -19,5 +19,22 @@ class MazoTest extends TestCase {
         $this->assertTrue($mazo->mezclar());
     }
 
+    public function testObtenerCarta() {
+        $mazo = new Mazo;
+        $this->assertTrue($mazo->getTop());
+    }
 
-}
+    public function testCortar() {
+        $mazo = new Mazo;
+        $this->assertTrue($mazo->cortar());
+    }
+    
+    public function testCantidadCartas() {
+        $mazo = new Mazo;
+        $this->assertTrue($mazo->cantidad());
+    }
+  
+    public function testAgregarCarta() {
+        $mazo = new Mazo;
+        $this->assertTrue($mazo->nuevacarta());
+    }
