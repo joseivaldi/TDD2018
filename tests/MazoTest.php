@@ -12,7 +12,7 @@ class MazoTest extends TestCase {
     public function testExiste() {
         $mazo = new Mazo([]);
         $this->assertTrue(isset($mazo));
-        $this->assertFalse(isset($mazoQueNoExiste))
+        $this->assertFalse(isset($mazoQueNoExiste));
     }
 
     public function testMezclable() {
