@@ -8,6 +8,10 @@ class Mazo {
   
   protected $cartas;
   
+  public function __construct($constructorcant){
+    $this->cantidad = $constructorcant;
+   }
+
   public function __construct($array) {
         $this->cartas = $array;
     }
