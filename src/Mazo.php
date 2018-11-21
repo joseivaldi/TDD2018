@@ -6,10 +6,10 @@ class Mazo {
   
   protected $cantidad;
   
-  protected $cartas;
+  protected $baraja;
   
-  public function __construct($constructorcant){
-    $this->cantidad = $constructorcant;
+  public function __construct($baraja){
+    $this->cartas = $baraja;
    }
   
   public function mezclar() {
