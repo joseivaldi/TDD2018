@@ -11,10 +11,6 @@ class Mazo {
   public function __construct($constructorcant){
     $this->cantidad = $constructorcant;
    }
-
-  public function __construct($array) {
-        $this->cartas = $array;
-    }
   
   public function mezclar() {
     return shuffle($this->cartas);
