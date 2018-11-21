@@ -29,7 +29,8 @@ class Mazo {
     return $this->cantidad;
   }
   
-  public function nuevacarta() {
+  public function nuevacarta($carta) {
+    array_push($this->cartas,$carta);
     return TRUE;
   }
   
