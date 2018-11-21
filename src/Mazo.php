@@ -17,8 +17,8 @@ class Mazo {
     return shuffle($this->cartas);
   }
   
-  public function getTop() {
-    return TRUE;
+  public function obtenerCarta($index) {
+    return $this->cartas[$index];
   }
   
   public function cortar() {
