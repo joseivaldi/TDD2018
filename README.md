@@ -1,5 +1,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/joseivaldi/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/joseivaldi/TDD2018?branch=master)
-
 [![Build Status](https://travis-ci.org/joseivaldi/TDD2018.svg?branch=master)](https://travis-ci.org/joseivaldi/TDD2018)
 
 # Consigna
