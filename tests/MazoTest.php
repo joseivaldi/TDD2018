@@ -43,7 +43,7 @@ class MazoTest extends TestCase {
     public function testEsVacio() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->esvacio());
-        $mazo2 = new Mazo([0])
+        $mazo2 = new Mazo([0]);
         $this->assertFalse($mazo2->esvacio());
     }  
 }
