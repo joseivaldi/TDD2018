@@ -32,6 +32,7 @@ class MazoTest extends TestCase {
     public function testCantidadCartas() {
         $mazo = new Mazo([]);
         $this->assertEquals(0,$mazo->cantidad());
+        $this->assertNotEquals(20,$mazo->cantidad());
     }
   
     public function testAgregarCarta() {
@@ -42,5 +43,7 @@ class MazoTest extends TestCase {
     public function testEsVacio() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->esvacio());
+        $mazo2 = new Mazo([0])
+        $this->assertFalse($mazo2->esvacio());
     }  
 }
