@@ -10,7 +10,7 @@ class Mazo {
   
   public function __construct($baraja){
     $this->baraja = $baraja;
-    $this->cantidad=count($cartas);
+    $this->cantidad=count($baraja);
   }
   
   public function mezclar() {
