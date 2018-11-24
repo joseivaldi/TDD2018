@@ -6,19 +6,19 @@ class Mazo {
   
   protected $cantidad;
   
-  protected $cartas;
+  protected $baraja;
   
   public function __construct($baraja){
-    $this->cartas = $baraja;
+    $this->baraja = $baraja;
     $this->cantidad=count($cartas);
   }
   
   public function mezclar() {
-    return shuffle($this->cartas);
+    return shuffle($this->baraja);
   }
   
   public function obtenerCarta($index) {
-    return $this->cartas[$index];
+    return $this->baraja[$index];
   }
   
   public function cortar() {
@@ -31,7 +31,7 @@ class Mazo {
   
   public function nuevacarta($carta) {
     array_push($this->cartas,$carta);
-    $this->cantidad=count($cartas);
+    $this->cantidad=count($baraja);
     return TRUE;
   }
   
