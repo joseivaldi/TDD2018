@@ -31,6 +31,7 @@ class Mazo {
   
   public function nuevacarta($carta) {
     array_push($this->cartas,$carta);
+    $this->cantidad=count($baraja);
     return TRUE;
   }
   
