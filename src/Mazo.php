@@ -36,7 +36,9 @@ class Mazo {
         $der = array_slice($this->baraja, $corte);
         $izq = array_slice($this->baraja, 0, $corte-1);
         $this->baraja = array_merge($der, $izq);
-    } else return FALSE;
+    } else {
+        return FALSE;
+    }
     }
   
     public function cantidad() {
