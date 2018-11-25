@@ -11,8 +11,8 @@ class Carta {
         $this->numcarta=$numero;
         $this->palo=$pal;
         $this->tip=$tipo;
-        $this->valoresP = [A,J,Q,K,2,3,4,5,6,7,8,9,10];
-        $this->valoresE = [1,2,3,4,5,6,7,8,9,10,11,12];
+        $this->valoresP = ["A","J","Q","K","2","3","4","5","6","7","8","9","10"];
+        $this->valoresE = ["1","2","3","4","5","6","7","8","9","10","11","12"];
         $this->palosP = ["Picas","Treboles","Diamantes","Corazones"];
         $this->palosE = ["Oro","Copa","Espada","Basto"];
     }
