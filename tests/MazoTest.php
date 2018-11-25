@@ -78,7 +78,7 @@ class MazoTest extends TestCase {
      */
     public function testAgregarCarta() {
         $mazo = new Mazo("Poker");
-        $mazo2 = new Mazo("Española")
+        $mazo2 = new Mazo("Española");
         $aspicas = new Carta ("A","Picas","Poker");
         $this->assertTrue($mazo->nuevacarta($aspicas));
         $this->assertFalse($mazo2->nuevacarta($aspicas));
