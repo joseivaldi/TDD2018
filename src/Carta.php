@@ -16,7 +16,7 @@ class Carta {
     public function esCarta($carta){
         if($carta->tip=="Poker"){
             if($carta->palo=="Diamantes"||$carta->palo=="Picas"||$carta->palo=="Corazones"||$carta->palo=="Treboles"){
-                if($carta->numcarta=='A'||$carta->numcarta=='J'||$carta->numcarta=='Q'||$carta->numcarta=='K'||($carta->numcarta>1&&$carta->numcarta<11)){
+                if($carta->numcarta=="A"||$carta->numcarta=="J"||$carta->numcarta=="Q"||$carta->numcarta=="K"||$carta->numcarta=="2"||$carta->numcarta=="3"||$carta->numcarta=="4"||$carta->numcarta=="5"||$carta->numcarta=="6"||$carta->numcarta=="7"||$carta->numcarta=="8"||$carta->numcarta=="9"||$carta->numcarta=="10"){
                     return TRUE;
                 }else return FALSE;
             }else return FALSE;
