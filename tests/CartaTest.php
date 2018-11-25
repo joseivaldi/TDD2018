@@ -8,6 +8,6 @@ class CartaTest extends TestCase {
    
     public function testCartaValida(){
         $unooro = new Carta("1","Oro", "Española");
-        $this->assertTrue(esCarta($unooro));
+        $this->assertTrue($unooro->esCarta());
     }
 }
