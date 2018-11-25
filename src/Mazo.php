@@ -7,10 +7,11 @@ class Mazo {
   protected $cantidad;
   protected $baraja;
   protected $tipo;
-  
+
   public function __construct($tipo){
     if($tipo=="Poker"||$tipo=="Española"){
       $this->tipo = $tipo;
+      $this->baraja=array();
       $this->cantidad=0;
     }else return FALSE;
   }
