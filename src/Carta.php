@@ -28,16 +28,16 @@ class Carta {
                     return TRUE;
                
             } else {
-              return FALSE;
+                return FALSE;
             }
         } elseif ($this->tip=="Española") {
             if (in_array($this->palo, $this->palosE)&&in_array($this->numcarta, $this->valoresE)) {
                 return TRUE;
             } else {
-              return FALSE;
+                return FALSE;
             }
         } else {
-          return FALSE;
+            return FALSE;
         }
     }
 
