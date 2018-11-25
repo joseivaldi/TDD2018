@@ -29,8 +29,8 @@ class Mazo {
   public function cortar() {
     if($this->cantidad!=0){
       $corte=rand(0,$this->cantidad);
-      $der = array_slice($baraja, $rancortedint);
-      $izq = array_slice($baraja, 0, $corte-1);
+      $der = array_slice($this->baraja, $rancortedint);
+      $izq = array_slice($this->baraja, 0, $corte-1);
 			$this->baraja=array_merge($der,$izq);
     }else return FALSE;
   }
