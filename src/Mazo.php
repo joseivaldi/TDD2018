@@ -27,7 +27,9 @@ class Mazo {
   }
   
   public function cortar() {
-    return TRUE;
+    if($this->cantidad!=0){  
+      return TRUE;
+    }else return FALSE;
   }
   
   public function cantidad() {

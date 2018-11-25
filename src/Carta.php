@@ -29,4 +29,12 @@ class Carta {
             }else return FALSE;
         }else return FALSE;
     }
+
+    public function verNumero(){
+        return $this->numcarta;
+    }
+
+    public function verPalo(){
+        return $this->palo;
+    }
 }

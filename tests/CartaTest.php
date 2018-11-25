@@ -21,6 +21,17 @@ class CartaTest extends TestCase {
         $this->assertTrue($aspicas->esCarta());
         $this->assertFalse($trecepicas->esCarta());
         $this->assertFalse($nopoker->esCarta());
+    }
 
+    public function testVerNumero(){
+        $unooro = new Carta("1","Oro", "Española");
+        $this->assertEquals($unooro->verNumero,"1");
+        $this->assertNotEquals($unooro->verNumero,"A");
+    }
+
+    public function testVerPalo(){
+        $unooro = new Carta("1","Oro", "Española");
+        $this->assertEquals($unooro->verPalo,"Oro");
+        $this->assertNotEquals($unooro->verPalo,"Oro");
     }
 }
