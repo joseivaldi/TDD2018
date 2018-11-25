@@ -48,7 +48,7 @@ class MazoTest extends TestCase {
      * Valida que el mazo cortado sea diferente al mazo antes de cortar.
      */
     public function testCortar() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
         $this->assertTrue($mazo->cortar());
     }
     
@@ -56,13 +56,15 @@ class MazoTest extends TestCase {
      * Valida que se obtenga bien la cantidad de cartas en el mazo.
      */
     public function testCantidadCartas() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
+        $aspicas = new Carta ("A","Picas","Poker");
         $this->assertEquals(0,$mazo->cantidad());
         $this->assertNotEquals(20,$mazo->cantidad());
-        $mazo->nuevacarta(1);
+        $mazo->nuevacarta($aspicas);
         $this->assertEquals(1,$mazo->cantidad());
         $this->assertNotEquals(20,$mazo->cantidad());
-        $mazo2 = new Mazo ([0]);
+        $mazo2 = new Mazo ("Poker");
+        $mazo2->nuevacarta($aspicas);
         $this->assertEquals(1,$mazo2->cantidad());
         $this->assertNotEquals(20,$mazo2->cantidad());
     }
@@ -71,7 +73,7 @@ class MazoTest extends TestCase {
      * Valida que se pueda agrergar una nueva carta al mazo.
      */
     public function testAgregarCarta() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
         $this->assertTrue($mazo->nuevacarta(1));
 
     }  
@@ -80,11 +82,13 @@ class MazoTest extends TestCase {
      * Valida que se pueda saber si el mazo tiene cartas o no.
      */
     public function testEsVacio() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
         $this->assertTrue($mazo->esvacio());
-        $mazo->nuevacarta(1);
+        $aspicas = new Carta ("A","Picas","Poker");
+        $mazo->nuevacarta($aspicas);
         $this->assertFalse($mazo->esvacio());
-        $mazo2 = new Mazo([0]);
+        $mazo2 = new Mazo("Poker");
+        $mazo2->nuevacarta($aspicas);
         $this->assertFalse($mazo2->esvacio());
     }  
 }
