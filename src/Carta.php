@@ -19,17 +19,15 @@ class Carta {
 
     public function esCarta(){
         if($this->tip=="Poker"){
-            if(in_array($this->palo,$this->palosP)){
-                if(in_array($this->numcarta,$this->valoresP)){
+            if(in_array($this->palo,$this->palosP&&in_array($this->numcarta,$this->valoresP))){
+                
                     return TRUE;
-                }else return FALSE;
+               
             }else return FALSE;
         }
         elseif($this->tip=="Española"){
-            if(in_array($this->palo,$this->palosE)){
-                if(in_array($this->numcarta,$this->valoresE)){
-                    return TRUE;
-                }else return FALSE;
+            if(in_array($this->palo,$this->palosE)&&in_array($this->numcarta,$this->valoresE)){
+                return TRUE;
             }else return FALSE;
         }else return FALSE;
     }
