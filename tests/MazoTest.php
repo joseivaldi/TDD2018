@@ -10,7 +10,7 @@ class MazoTest extends TestCase {
      * Valida que se puedan crear mazos de cartas.
      */
     public function testExiste() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
         $this->assertTrue(isset($mazo));
         $this->assertFalse(isset($mazoQueNoExiste));
     }
@@ -19,7 +19,7 @@ class MazoTest extends TestCase {
      * Valida que el mazo mezclado sea diferente al mazo sin mezclar.
      */
     public function testMezclable() {
-        $mazo = new Mazo([]);
+        $mazo = new Mazo("Poker");
         $this->assertTrue($mazo->mezclar());
     }
 
@@ -28,14 +28,20 @@ class MazoTest extends TestCase {
      */
     public function testObtenerCarta() {
         $mazo = new Mazo([0,10]);
-        $this->assertEquals($mazo->obtenerCarta(0),0);
-        $this->assertNotEquals($mazo->obtenerCarta(0),10);
-        $this->assertEquals($mazo->obtenerCarta(1),10);
-        $this->assertNotEquals($mazo->obtenerCarta(1),0);
-        $mazo2 = new Mazo([]);
-        $mazo2->nuevacarta(0);
-        $this->assertEquals($mazo->obtenerCarta(0),0);
-        $this->assertNotEquals($mazo->obtenerCarta(0),10);
+        $aspicas = new Carta ("A","Picas","Poker");
+        $dospicas = new Carta ("2","Picas","Poker");
+        $mazo->nuevacarta($aspicas);
+        $mazo->nuevacarta($dospicas);
+        $this->assertEquals($mazo->obtenerCarta(0),$aspicas);
+        $this->assertNotEquals($mazo->obtenerCarta(0),$dospicas);
+        $this->assertEquals($mazo->obtenerCarta(1),$dospicas);
+        $this->assertNotEquals($mazo->obtenerCarta(1),$aspicas);
+        $mazo2 = new Mazo("Española");
+        $dosoro = new Carta ("2","Oro","Española");
+        $tresoro = new Carta ("3","Oro","Española");
+        $mazo2->nuevacarta($dosoro);
+        $this->assertEquals($mazo->obtenerCarta(0),$dosoro);
+        $this->assertNotEquals($mazo->obtenerCarta(0),$tresoro);
     }
 
     /**

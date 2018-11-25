@@ -5,13 +5,14 @@ namespace TDD;
 class Mazo {
   
   protected $cantidad;
-  
   protected $baraja;
   protected $tipo;
   
-  public function __construct($baraja){
-    $this->baraja = $baraja;
-    $this->cantidad=count($baraja);
+  public function __construct($tipo){
+    if($tipo=="Poker"||$tipo=="Española"){
+      $this->tipo = $tipo;
+      $this->cantidad=0;
+    }else return FALSE;
   }
   
   public function mezclar() {
@@ -31,9 +32,11 @@ class Mazo {
   }
   
   public function nuevacarta($carta) {
+    if($carta->tip==$this->tipo){
       array_push($this->baraja,$carta);
       $this->cantidad=count($this->baraja);
       return TRUE;
+    }else return FALSE;
   }
   
   public function esvacio() {
