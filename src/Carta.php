@@ -6,6 +6,10 @@ class Carta {
     public $numcarta;
     public $palo;
     public $tip;
+    public $valoresP;
+    public $valoresE;
+    public $palosP;
+    public $palosE;
 
     public function __construct($numero, $pal, $tipo){
         $this->numcarta=$numero;
