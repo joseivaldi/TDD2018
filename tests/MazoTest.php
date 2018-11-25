@@ -58,7 +58,7 @@ class MazoTest extends TestCase {
         $dospicas = new Carta ("2","Picas","Poker");
         $mazo->nuevacarta($aspicas);
         $mazo->nuevacarta($dospicas);
-        $this->assertTrue($mazo->cortar());                         //Pruebo que un mazo con una carta SI puede cortarse
+        $this->assertNotEquals($mazo,$mazo->cortar());                         //Pruebo que un mazo con una carta SI puede cortarse
     }
     
         /**
