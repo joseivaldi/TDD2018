@@ -7,6 +7,7 @@ class Mazo {
   protected $cantidad;
   
   protected $baraja;
+  protected $tipo;
   
   public function __construct($baraja){
     $this->baraja = $baraja;
@@ -30,9 +31,9 @@ class Mazo {
   }
   
   public function nuevacarta($carta) {
-    array_push($this->baraja,$carta);
-    $this->cantidad=count($this->baraja);
-    return TRUE;
+      array_push($this->baraja,$carta);
+      $this->cantidad=count($this->baraja);
+      return TRUE;
   }
   
   public function esvacio() {

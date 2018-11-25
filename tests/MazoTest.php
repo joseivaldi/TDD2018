@@ -15,11 +15,17 @@ class MazoTest extends TestCase {
         $this->assertFalse(isset($mazoQueNoExiste));
     }
 
+    /**
+     * Valida que el mazo mezclado sea diferente al mazo sin mezclar.
+     */
     public function testMezclable() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->mezclar());
     }
 
+    /**
+     * Valida que se pueda conocer una carta buscando por posicion.
+     */
     public function testObtenerCarta() {
         $mazo = new Mazo([0,10]);
         $this->assertEquals($mazo->obtenerCarta(0),0);
@@ -32,11 +38,17 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($mazo->obtenerCarta(0),10);
     }
 
+    /**
+     * Valida que el mazo cortado sea diferente al mazo antes de cortar.
+     */
     public function testCortar() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->cortar());
     }
     
+    /**
+     * Valida que se obtenga bien la cantidad de cartas en el mazo.
+     */
     public function testCantidadCartas() {
         $mazo = new Mazo([]);
         $this->assertEquals(0,$mazo->cantidad());
@@ -48,13 +60,19 @@ class MazoTest extends TestCase {
         $this->assertEquals(1,$mazo2->cantidad());
         $this->assertNotEquals(20,$mazo2->cantidad());
     }
-  
+    
+    /**
+     * Valida que se pueda agrergar una nueva carta al mazo.
+     */
     public function testAgregarCarta() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->nuevacarta(1));
 
     }  
     
+    /**
+     * Valida que se pueda saber si el mazo tiene cartas o no.
+     */
     public function testEsVacio() {
         $mazo = new Mazo([]);
         $this->assertTrue($mazo->esvacio());
