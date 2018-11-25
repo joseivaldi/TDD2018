@@ -13,13 +13,17 @@ class Mazo {
       $this->tipo=$tipo;
       $this->baraja=array();
       $this->cantidad=0;
-    }else return FALSE;
+    } else {
+      return FALSE;
+    }
   }
   
   public function mezclar() {
     if ($this->cantidad!=0) {  
       return shuffle($this->baraja);
-    }else return FALSE;
+    } else {
+      return FALSE;
+    }
   }
   
   public function obtenerCarta($index) {
@@ -27,11 +31,11 @@ class Mazo {
   }
   
   public function cortar() {
-    if($this->cantidad!=0){
-      $corte=rand(0,$this->cantidad);
-      $der = array_slice($this->baraja, $corte);
-      $izq = array_slice($this->baraja, 0, $corte-1);
-      $this->baraja=array_merge($der,$izq);
+    if ($this->cantidad!=0) {
+      $corte=rand(0, $this->cantidad);
+      $der=array_slice($this->baraja, $corte);
+      $izq=array_slice($this->baraja, 0, $corte-1);
+      $this->baraja=array_merge($der, $izq);
     }else return FALSE;
   }
   
@@ -44,14 +48,15 @@ class Mazo {
       array_push($this->baraja, $carta);
       $this->cantidad=count($this->baraja);
       return TRUE;
-    }else return FALSE;
+    } else {
+      return FALSE;
+    }
   }
   
   public function esvacio() {
     if ($this->cantidad==0) {
       return TRUE;
-    }
-    else {
+    } else {
       return FALSE;
     }
   }
