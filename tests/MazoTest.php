@@ -17,7 +17,7 @@ class MazoTest extends TestCase {
     }
 
     /**
-     * Valida que el mazo mezclado sea diferente al mazo sin mezclar.
+     * Valida que el se pueda mezclar.
      */
     public function testMezclable() {
         $mazo = new Mazo("Poker");
@@ -49,7 +49,7 @@ class MazoTest extends TestCase {
     }
 
     /**
-     * Valida que el mazo cortado sea diferente al mazo antes de cortar.
+     * Valida que el mazo se pueda cortar.
      */
     public function testCortar() {
         $mazo = new Mazo("Poker");
