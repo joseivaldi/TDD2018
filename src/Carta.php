@@ -11,19 +11,23 @@ class Carta {
         $this->numcarta=$numero;
         $this->palo=$pal;
         $this->tip=$tipo;
+        $this->valoresP = [A,J,Q,K,2,3,4,5,6,7,8,9,10];
+        $this->valoresE = [1,2,3,4,5,6,7,8,9,10,11,12];
+        $this->palosP = ["Picas","Treboles","Diamantes","Corazones"];
+        $this->palosE = ["Oro","Copa","Espada","Basto"];
     }
 
     public function esCarta(){
         if($this->tip=="Poker"){
-            if($this->palo=="Diamantes"||$this->palo=="Picas"||$this->palo=="Corazones"||$this->palo=="Treboles"){
-                if($this->numcarta=="A"||$this->numcarta=="J"||$this->numcarta=="Q"||$this->numcarta=="K"||$this->numcarta=="2"||$this->numcarta=="3"||$this->numcarta=="4"||$this->numcarta=="5"||$this->numcarta=="6"||$this->numcarta=="7"||$this->numcarta=="8"||$this->numcarta=="9"||$this->numcarta=="10"){
+            if(in_array($this->palo,$this->palosP)){
+                if(in_array($this->numcarta,$this->valoresP)){
                     return TRUE;
                 }else return FALSE;
             }else return FALSE;
         }
         elseif($this->tip=="Española"){
-            if($this->palo=="Oro"||$this->palo=="Basto"||$this->palo=="Espada"||$this->palo=="Copa"){
-                if($this->numcarta>=1&&$this->numcarta<=12){
+            if(in_array($this->palo,$this->palosE)){
+                if(in_array($this->numcarta,$this->valoresE)){
                     return TRUE;
                 }else return FALSE;
             }else return FALSE;
