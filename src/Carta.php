@@ -27,13 +27,18 @@ class Carta {
                 
                     return TRUE;
                
-            }else return FALSE;
-        }
-        elseif ($this->tip=="Española") {
+            } else {
+              return FALSE;
+            }
+        } elseif ($this->tip=="Española") {
             if (in_array($this->palo, $this->palosE)&&in_array($this->numcarta, $this->valoresE)) {
                 return TRUE;
-            }else return FALSE;
-        }else return FALSE;
+            } else {
+              return FALSE;
+            }
+        } else {
+          return FALSE;
+        }
     }
 
     public function verNumero() {
