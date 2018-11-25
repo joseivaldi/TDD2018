@@ -27,7 +27,7 @@ class MazoTest extends TestCase {
      * Valida que se pueda conocer una carta buscando por posicion.
      */
     public function testObtenerCarta() {
-        $mazo = new Mazo([0,10]);
+        $mazo = new Mazo("Poker");
         $aspicas = new Carta ("A","Picas","Poker");
         $dospicas = new Carta ("2","Picas","Poker");
         $mazo->nuevacarta($aspicas);
