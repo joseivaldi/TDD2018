@@ -25,13 +25,13 @@ class CartaTest extends TestCase {
 
     public function testVerNumero(){
         $unooro = new Carta("1","Oro", "Española");
-        $this->assertEquals($unooro->verNumero,"1");
-        $this->assertNotEquals($unooro->verNumero,"A");
+        $this->assertEquals($unooro->verNumero(),"1");
+        $this->assertNotEquals($unooro->verNumero(),"A");
     }
 
     public function testVerPalo(){
         $unooro = new Carta("1","Oro", "Española");
-        $this->assertEquals($unooro->verPalo,"Oro");
-        $this->assertNotEquals($unooro->verPalo,"Oro");
+        $this->assertEquals($unooro->verPalo(),"Oro");
+        $this->assertNotEquals($unooro->verPalo(),"Oro");
     }
 }
