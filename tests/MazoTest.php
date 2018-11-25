@@ -55,7 +55,9 @@ class MazoTest extends TestCase {
         $mazo = new Mazo("Poker");
         $this->assertFalse($mazo->cortar());                        //Pruebo que un mazo sin cartas NO puede cortarse
         $aspicas = new Carta ("A","Picas","Poker");
+        $dospicas = new Carta ("2","Picas","Poker");
         $mazo->nuevacarta($aspicas);
+        $mazo->nuevacarta($dospicas);
         $this->assertTrue($mazo->cortar());                         //Pruebo que un mazo con una carta SI puede cortarse
     }
     
