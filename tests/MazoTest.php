@@ -43,8 +43,8 @@ class MazoTest extends TestCase {
         $dosoro = new Carta ("2","Oro","Española");
         $tresoro = new Carta ("3","Oro","Española");
         $mazo2->nuevacarta($dosoro);
-        $this->assertEquals($mazo->obtenerCarta(0),$dosoro);
-        $this->assertNotEquals($mazo->obtenerCarta(0),$tresoro);
+        $this->assertEquals($mazo2->obtenerCarta(0),$dosoro);
+        $this->assertNotEquals($mazo2->obtenerCarta(0),$tresoro);
     }
 
     /**
