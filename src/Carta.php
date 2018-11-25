@@ -8,9 +8,9 @@ class Carta {
     protected $tip;
 
     public function __construct($numero, $pal, $tipo){
-        $this->$numcarta=$numero;
-        $this->$palo=$pal;
-        $this->$tip=$tipo;
+        $this->numcarta=$numero;
+        $this->palo=$pal;
+        $this->tip=$tipo;
     }
 
     public function esCarta($carta){
