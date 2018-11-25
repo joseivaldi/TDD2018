@@ -23,7 +23,7 @@ class Carta {
 
     public function esCarta(){
         if($this->tip=="Poker"){
-            if(in_array($this->palo,$this->palosP&&in_array($this->numcarta,$this->valoresP))){
+            if(in_array($this->palo,$this->palosP)&&in_array($this->numcarta,$this->valoresP)){
                 
                     return TRUE;
                
