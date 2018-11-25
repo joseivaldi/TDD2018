@@ -13,17 +13,17 @@ class Carta {
         $this->tip=$tipo;
     }
 
-    public function esCarta($carta){
-        if($carta->tip=="Poker"){
-            if($carta->palo=="Diamantes"||$carta->palo=="Picas"||$carta->palo=="Corazones"||$carta->palo=="Treboles"){
-                if($carta->numcarta=="A"||$carta->numcarta=="J"||$carta->numcarta=="Q"||$carta->numcarta=="K"||$carta->numcarta=="2"||$carta->numcarta=="3"||$carta->numcarta=="4"||$carta->numcarta=="5"||$carta->numcarta=="6"||$carta->numcarta=="7"||$carta->numcarta=="8"||$carta->numcarta=="9"||$carta->numcarta=="10"){
+    public function esCarta(){
+        if($this->tip=="Poker"){
+            if($this->palo=="Diamantes"||$this->palo=="Picas"||$this->palo=="Corazones"||$this->palo=="Treboles"){
+                if($this->numcarta=="A"||$this->numcarta=="J"||$this->numcarta=="Q"||$this->numcarta=="K"||$this->numcarta=="2"||$this->numcarta=="3"||$this->numcarta=="4"||$this->numcarta=="5"||$this->numcarta=="6"||$this->numcarta=="7"||$this->numcarta=="8"||$this->numcarta=="9"||$this->numcarta=="10"){
                     return TRUE;
                 }else return FALSE;
             }else return FALSE;
         }
-        elseif($carta->tip=="Española"){
-            if($carta->palo=="Oro"||$carta->palo=="Basto"||$carta->palo=="Espada"||$carta->palo=="Copa"){
-                if($carta->numcarta>=1&&$carta->numcarta<=12){
+        elseif($this->tip=="Española"){
+            if($this->palo=="Oro"||$this->palo=="Basto"||$this->palo=="Espada"||$this->palo=="Copa"){
+                if($this->numcarta>=1&&$this->numcarta<=12){
                     return TRUE;
                 }else return FALSE;
             }else return FALSE;
