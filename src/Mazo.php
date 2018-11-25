@@ -9,17 +9,17 @@ class Mazo {
     protected $tipo;
 
     public function __construct($tipo) {
-    if ($tipo=="Poker"||$tipo=="Española") {
-        $this->tipo=$tipo;
-        $this->baraja=array();
-        $this->cantidad=0;
+    if ($tipo == "Poker" || $tipo == "Española") {
+        $this->tipo = $tipo;
+        $this->baraja = array();
+        $this->cantidad = 0;
     } else {
         return FALSE;
     }
     }
   
     public function mezclar() {
-    if ($this->cantidad!=0) {  
+    if ($this->cantidad != 0) {  
         return shuffle($this->baraja);
     } else {
         return FALSE;
@@ -31,12 +31,12 @@ class Mazo {
     }
   
     public function cortar() {
-    if ($this->cantidad!=0) {
-        $corte=rand(0, $this->cantidad);
-        $der=array_slice($this->baraja, $corte);
-        $izq=array_slice($this->baraja, 0, $corte-1);
-        $this->baraja=array_merge($der, $izq);
-    }else return FALSE;
+    if ($this->cantidad != 0) {
+        $corte = rand(0, $this->cantidad);
+        $der = array_slice($this->baraja, $corte);
+        $izq = array_slice($this->baraja, 0, $corte-1);
+        $this->baraja = array_merge($der, $izq);
+    } else return FALSE;
     }
   
     public function cantidad() {
@@ -44,9 +44,9 @@ class Mazo {
     }
   
     public function nuevacarta($carta) {
-    if ($carta->tip==$this->tipo) {
+    if ($carta->tip == $this->tipo) {
         array_push($this->baraja, $carta);
-        $this->cantidad=count($this->baraja);
+        $this->cantidad = count($this->baraja);
         return TRUE;
     } else {
         return FALSE;
@@ -54,7 +54,7 @@ class Mazo {
     }
   
     public function esvacio() {
-    if ($this->cantidad==0) {
+    if ($this->cantidad == 0) {
         return TRUE;
     } else {
         return FALSE;
