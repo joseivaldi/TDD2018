@@ -16,7 +16,9 @@ class Mazo {
   }
   
   public function mezclar() {
-    return shuffle($this->baraja);
+    if($this->cantidad!=0){  
+      return shuffle($this->baraja);
+    }else return FALSE;
   }
   
   public function obtenerCarta($index) {

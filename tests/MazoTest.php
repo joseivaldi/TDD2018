@@ -20,6 +20,9 @@ class MazoTest extends TestCase {
      */
     public function testMezclable() {
         $mazo = new Mazo("Poker");
+        $this->assertFalse($mazo->mezclar());
+        $aspicas = new Carta ("A","Picas","Poker");
+        $mazo->nuevacarta($aspicas);
         $this->assertTrue($mazo->mezclar());
     }
 

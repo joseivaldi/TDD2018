@@ -3,9 +3,9 @@
 namespace TDD;
 
 class Carta {
-    protected $numcarta;
-    protected $palo;
-    protected $tip;
+    public $numcarta;
+    public $palo;
+    public $tip;
 
     public function __construct($numero, $pal, $tipo){
         $this->numcarta=$numero;
